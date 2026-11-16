@@ -9,6 +9,8 @@ app.use(cors()); //telling our server to allow cross-origin requests
 const server = createServer(app);
 const io = new Server(server, { cors: { origin: "*" } }); //creating our socket connection
 
+const PORT = process.env.PORT || 3000;
+
 io.on("connection", (socket) => {
   socket.on("draw", (line) => {
     socket.broadcast.emit("draw", line); //broadcast event for when I draw on our canvas
@@ -37,6 +39,6 @@ io.on("connection", (socket) => {
 });
 
 //tell our server to listen to our localhost:3000
-server.listen(3000, () => {
-  console.log("server running on http://localhost:3000");
+server.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
 });
