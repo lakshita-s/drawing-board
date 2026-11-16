@@ -1,0 +1,15 @@
+body {
+  font-family: "Mystery Quest", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin: 5%;
+  background-color: rgb(222, 167, 174);
+}
+
+canvas {
+  background: rgb(112, 136, 164);
+  border: 10px dotted #c4c4c4;
+  cursor: pointer;
+  margin-top: 2%;
+  
+}
